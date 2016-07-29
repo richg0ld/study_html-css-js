@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float</title>
+    <style>
+        hr{margin:50px 0}
+        div{background-color:pink}
+        div div{background-color: deeppink}
+        span{background-color: hotpink}
+        h4{border:4px solid gray;}
+
+        .float_left{float:left}
+        .float_right{float:right}
+        .clear_both{clear:both}
+        .red{background-color:black;color:white;}
+
+        .solution1{float:left}
+        .solution2{overflow:hidden}
+        .solution3{clear:both}
+        .solution4{*zoom:1}
+        .solution4:after{content:""; display:block; clear:both}
+        .solution5{display: inline-block}
+    </style>
+</head>
+<body>
+
+<h1>float</h1>
+<small>자기 자신의 위치를 주변의 콘텐츠로부터 상대적으로 배치하는 속성</small>
+
+<ul id="control">
+    <li><a href="#c1">float: left</a></li>
+    <li><a href="#c2">float: right</a></li>
+    <li><a href="#c3">inline요소에 float 을 사용할 경우</a></li>
+    <li><a href="#c4">float 시 원치 않는 현상들</a></li>
+    <li><a href="#c5">float 해제 방법</a></li>
+</ul>
+
+<section id="c1">
+    <h2>float: left</h2>
+    <div class="float_left">float: left 1번</div>
+    <div class="float_left">float: left 2번</div>
+    <div class="float_left">float: left 3번</div>
+    <hr>
+</section>
+
+<section id="c2">
+    <h2>float: right</h2>
+    <div class="float_right">float: left 1번</div>
+    <div class="float_right">float: left 2번</div>
+    <div class="float_right">float: left 3번</div>
+    <hr>
+</section>
+
+<section id="c3">
+    <h2>inline요소에 float 을 사용할 경우</h2>
+    <span class="float_left">float: left 1번</span>
+    <span class="float_left">float: left 2번</span>
+    <span class="float_left">float: left 3번</span>
+
+    <span class="float_right">float: right 1번</span>
+    <span class="float_right">float: right 2번</span>
+    <span class="float_right">float: right 3번</span>
+    <hr>
+</section>
+
+<section id="c4">
+    <h2>float 시 원치 않는 현상들</h2>
+    <div>
+        <h4>header</h4>
+    </div>
+    <div>
+        <h4>container</h4>
+        <div class="float_left">float: left</div>
+        <div class="float_right">float: right</div>
+    </div>
+    <div>
+        <h4>footer</h4>
+    </div>
+    <hr>
+</section>
+
+<section id="c5">
+    <h2>float 해제 방법</h2>
+    <h3>방법1. 부모요소에 float:left</h3>
+    <div>
+        <h4>header</h4>
+    </div>
+    <div class="solution1">
+        <h4>container</h4>
+        <div class="float_left">float: left</div>
+        <div class="float_right">float: right</div>
+    </div>
+    <div class="clear_both">
+        <h4>footer</h4>
+    </div>
+    <h3>방법2. 부모요소에 overflow:hidden</h3>
+    <div>
+        <h4>header</h4>
+    </div>
+    <div class="solution2">
+        <h4>container</h4>
+        <div class="float_left">float: left</div>
+        <div class="float_right">float: right</div>
+    </div>
+    <div>
+        <h4>footer</h4>
+    </div>
+    <h3>방법3. 빈 엘리먼트로 clear:both</h3>
+    <div>
+        <h4>header</h4>
+    </div>
+    <div>
+        <h4>container</h4>
+        <div class="float_left">float: left</div>
+        <div class="float_right">float: right</div>
+        <div class="solution3"></div>
+    </div>
+    <div>
+        <h4>footer</h4>
+    </div>
+
+    <h3 class="red">방법4. 부모요소에 가상선택자를 이용한 clear:both</h3>
+    <div>
+        <h4>header</h4>
+    </div>
+    <div class="solution4">
+        <h4>container</h4>
+        <div class="float_left">float: left</div>
+        <div class="float_right">float: right</div>
+    </div>
+    <div>
+        <h4>footer</h4>
+    </div>
+
+    <h3>방법5. 부모요소에 display:inlin-block</h3>
+    <div>
+        <h4>header</h4>
+    </div>
+    <div class="solution5">
+        <h4>container</h4>
+        <div class="float_left">float: left</div>
+        <div class="float_right">float: right</div>
+    </div>
+    <div>
+        <h4>footer</h4>
+    </div>
+    <hr>
+</section>
+
+<a href="http://naradesign.net/wp/2008/05/27/144/">http://naradesign.net/wp/2008/05/27/144/</a>
+
+</body>
+</html>

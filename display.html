@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display</title>
+    <style>
+        hr{margin:50px 0}
+        div{background-color:pink}
+        span{background-color: hotpink}
+
+        .inline_block{display:inline-block;background-color:skyblue}
+        .m10{margin:10px}
+        .p10{padding:10px}
+    </style>
+</head>
+<body>
+    <h1>display</h1>
+
+    <ul id="control">
+        <li><a href="#c1">블록과 인라인 요소</a></li>
+        <li><a href="#c2">블록과 인라인 요소의 상관관계</a></li>
+        <li><a href="#c3">inline-block은?</a></li>
+        <li><a href="#c4">각각의 요소들의 차이점</a></li>
+    </ul>
+
+    <section id="c1">
+        <h2>블록과 인라인 요소</h2>
+        <div>display:block 요소</div>
+        <span>display:inline 요소</span>
+        <hr>
+    </section>
+
+    <section id="c2">
+        <h2>블록과 인라인 요소의 상관관계</h2>
+        <h3>1번</h3>
+        <div>
+            <span>block안에 inline이 들어간 경우</span>
+        </div>
+        <h3>2번</h3>
+        <div>
+            <div>block안에 block이 들어간 경우</div>
+        </div>
+        <h3>3번</h3>
+        <span>
+            <div>inline안에 block이 들어간 경우</div>
+        </span>
+        <h3>4번</h3>
+        <span>
+            <span>inline안에 inline이 들어간 경우</span>
+        </span>
+        <hr>
+    </section>
+
+    <section id="c3">
+        <h2>inline-block은?</h2>
+        <div class="inline_block">
+            inline요소이면서 block요소의 일부 속성을 사용 할 수 있는 상태
+            block 요소를 inline 처럼 사용 가능
+            inline 요소 또한 blcok 처럼 사용 가능
+        </div>
+        <hr>
+    </section>
+
+    <section id="c4">
+        <h2>각각의 요소들의 차이점</h2>
+        <h3>margin: 10px 을 주었을 때</h3>
+        <div class="m10">block</div>
+        <span class="m10">inline</span>
+        <span class="inline_block m10">inline-block</span>
+        <div class="inline_block m10">inline-block</div>
+
+        <h3>padding: 10px 을 주었을 때</h3>
+        <div class="p10">block</div>
+        <span class="p10">inline</span>
+        <span class="inline_block p10">inline-block</span>
+        <div class="inline_block p10">inline-block</div>
+
+        <h3>margin: 10px 을 주면서 텍스트와 같이 쓰였을 때</h3>
+        <h4>block</h4>
+        blahblahblahblah<div class="m10">block</div>blahblahblahblah
+        <h4>inline</h4>
+        blahblahblahblah<span class="m10">inline</span>blahblahblahblah
+        <h4>inline-block</h4>
+        blahblahblahblah<span class="inline_block m10">inline-block</span>blahblahblahblah
+        blahblahblahblah<div class="inline_block m10">inline-block</div>blahblahblahblah
+
+        <h3>padding: 10px 을 주면서 텍스트와 같이 쓰였을 때</h3>
+        <h4>block</h4>
+        blahblahblahblah<div class="p10">block</div>blahblahblahblah
+        <h4>inline</h4>
+        blahblahblahblah<span class="p10">inline</span>blahblahblahblah
+        <h4>inline-block</h4>
+        blahblahblahblah<span class="inline_block p10">inline-block</span>blahblahblahblah
+        blahblahblahblah<div class="inline_block p10">inline-block</div>blahblahblahblah
+    </section>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float</title>
+    <style>
+        hr{margin:50px 0}
+        div{background-color:pink;height:100px;}
+        div div{background-color: deeppink; width:50px;height:50px;}
+        .static{position:static;}
+        .relative{position:relative;}
+        .absolute{position:absolute;}
+        .fixed{position:fixed;}
+        .move{left:100px;top:-20px;}
+    </style>
+</head>
+<body>
+
+<h1>float</h1>
+<small>자기 자신의 위치를 주변의 콘텐츠로부터 상대적으로 배치하는 속성</small>
+
+<ul id="control">
+    <li><a href="#c1">position: static</a></li>
+    <li><a href="#c2">position: relative</a></li>
+    <li><a href="#c3">position: absolute</a></li>
+    <li><a href="#c4">position: fixed</a></li>
+</ul>
+
+<h2>default 상태</h2>
+<div>
+    defualt
+    <div>defualt</div>
+</div>
+<section id="c1">
+    <h2>position: static</h2>
+    <h3>static 상태</h3>
+    <div>
+        defualt
+        <div class="static">static</div>
+    </div>
+
+    <h3>static 상태 left:100px, top:-20px 이동할 경우</h3>
+    <div>
+        defualt
+        <div class="static move">static</div>
+    </div>
+    <hr>
+</section>
+
+<section id="c2">
+    <h2>position: relative</h2>
+    <h3>relatvie 상태</h3>
+    <div>
+        defualt
+        <div class="relative">relative</div>
+    </div>
+    <h3>relatvie 상태 left:100px, top:-20px 이동할 경우</h3>
+    <div>
+        defualt
+        <div class="relative move">relative</div>
+    </div>
+    <h3>relatvie 상태 left:100px, top:-20px 이동한 상태에서 다음 block 요소 추가시</h3>
+    <div>
+        defualt
+        <div class="relative move">relative</div>
+        <div >default</div>
+    </div>
+    <hr>
+</section>
+
+<section id="c3">
+    <h2>position: absolute</h2>
+    <h3>absolute 상태</h3>
+    <div>
+        defualt
+        <div class="absolute">absolute</div>
+    </div>
+    <h3>absolute 상태 left:100px, top:-20px 이동할 경우</h3>
+    <div>
+        defualt
+        <div class="absolute move">absolute</div>
+    </div>
+    <h3>absolute 상태 left:100px, top:-20px 이동한 상태에서 이며 부모가 relative, absolute, fixed 일 경우</h3>
+    <div class="relative">
+        relative
+        <div class="absolute move">absolute</div>
+    </div>
+    <h3>absolute 상태 left:100px, top:-20px 이동한 상태에서 이며 부모가 relative, absolute, fixed 일 경우에 다음 block 요소 추가시</h3>
+    <div class="relative">
+        relative
+        <div class="absolute move">absolute</div>
+        <div >default</div>
+    </div>
+    <hr>
+</section>
+
+<section id="c4">
+    <h2>position: fixed</h2>
+    <h3>fixed 상태</h3>
+    <div>
+        defualt
+        <div class="fixed">fixed</div>
+    </div>
+    <h3>fixed 상태 left:100px, top:-20px 이동할 경우</h3>
+    <div>
+        defualt
+        <div class="fixed move">fixed</div>
+    </div>
+    <h3>fixed 상태 left:100px, top:-20px 이동한 상태에서 이며 부모가 relative, absolute, fixed 일 경우</h3>
+    <div class="relative">
+        relative
+        <div class="fixed move">fixed</div>
+    </div>
+    <h3>fixed 상태 left:100px, top:-20px 이동한 상태에서 이며 부모가 relative, absolute, fixed 일 경우에 다음 block 요소 추가시</h3>
+    <div class="relative">
+        relative
+        <div class="fixed move">fixed</div>
+        <div >default</div>
+    </div>
+    <hr>
+</section>
+
+</body>
+</html>
